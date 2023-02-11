@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Web Sockets</title>
+</head>
+<body class="flex flex-col items-center">
+  <h1 class="w-full text-center text-5xl font-semibold my-8">Welcome to Socket io</h1>
+  <form id="form" action="POST" class="flex flex-col p-16 w-full max-w-xl items-center">
+    <input type="text" id="msg-to-server" class="border-2 rounded border-indigo-600 w-3/4">
+    <button type="submit"
+      class="
+      bg-gradient-to-r from-indigo-600 to-emerald-600 text-xl font-bold text-white px-4 rounded-lg my-4 py-1
+      hover:bg-gradiento-to-l hover:to-indigo-600 hover:from-emerald-600"
+    > 
+      Submit
+    </button>
+  </form>
+
+  <div id="messages" class="w-full max-w-3xl">
+    <ul id="chat" class="border-emerald-500 w-full">
+      <!-- <li class="odd:bg-indigo-100 even:bg-green-100 px-4 py-2">Test Message</li> -->
+      </ul>
+  </div>
+  <script src="/socket.io/socket.io.js" ></script>
+  <script src="./chat.js">
+  </script>
+</body>
+</html>
